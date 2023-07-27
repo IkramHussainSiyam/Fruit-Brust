@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome link -->
+    <script
+      src="https://kit.fontawesome.com/2a29a728c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- website title -->
+    <title>Fruit Burst - Assignment 3</title>
+  </head>
+  <body class="font-['inter']">
+    <!----------------------------
+        Navbar section
+    ----------------------------->
+    <header class="sm:py-[50px] py-[35px] mx-8 sm:mx-0">
+      <!-- nav container -->
+      <nav
+        class="sm:bg-[#f85559] sm:max-w-[1440px] sm:mx-auto sm:rounded-full sm:px-[50px] sm:py-[30px] flex items-center justify-between relative z-[1000]"
+      >
+        <!-- nav menu -->
+        <div class="hidden sm:block">
+          <ul class="flex items-center text-white gap-8 text-lg">
+            <li><a href="" class="hover:border-b-2">Home</a></li>
+            <li><a href="" class="hover:border-b-2">About Us</a></li>
+            <li><a href="" class="hover:border-b-2">Shop</a></li>
+            <li><a href="" class="hover:border-b-2">All Fruits</a></li>
+          </ul>
+        </div>
+        <!-- nav logo -->
+        <div class="flex items-center gap-3 cursor-pointer">
+          <img src="assets/img/logo.png" alt="Nav_logo" />
+          <p class="text-2xl font-medium sm:text-white">Fruit Burst</p>
+        </div>
+        <!-- nav search -->
+        <div class="hidden sm:flex relative">
+          <!-- searchbar -->
+          <div>
+            <input
+              class="bg-gray-100 outline-none pl-5 pr-12 py-3 rounded-full"
+              type="text"
+              placeholder="Search here"
+            />
+          </div>
+          <!-- searchbar icon -->
+          <div class="absolute right-4 bottom-3">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <!-- hamburger menu -->
+        <div class="sm:hidden">
+          <input class="peer/hamburger hidden" type="checkbox" id="hamburger" />
+          <label for="hamburger" class="btn"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <!-- mobile menu -->
+          <div
+            class="sm:hidden absolute bg-white left-0 px-6 py-8 w-full rounded-xl shadow-md border border-black/5 top-[160%] peer-checked/hamburger:scale-105 transform transition scale-0"
+          >
+            <!-- menu-->
+            <ul class="text-lg leading-[3] text-center">
+              <li>
+                <a
+                  href=""
+                  class="hover:border-b-2 hover:border-[#f85559] hover:text-[#f85559] transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:border-b-2 hover:border-[#f85559] hover:text-[#f85559] transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:border-b-2 hover:border-[#f85559] hover:text-[#f85559] transition"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:border-b-2 hover:border-[#f85559] hover:text-[#f85559] transition"
+                  >All Fruits</a
+                >
+              </li>
+            </ul>
+            <!-- search -->
+            <div class="flex items-center justify-center">
+              <!-- searchbar -->
+              <div class="mt-4 relative">
+                <input
+                  class="bg-gray-100 focus:outline-[#f85559] outline-none pl-5 pr-12 py-3 rounded-full"
+                  type="text"
+                  placeholder="Search here"
+                />
+                <!-- icon -->
+                <!-- searchbar icon -->
+                <div class="absolute right-4 bottom-[0.7rem]">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!----------------------------
+        Hero / banner section
+    ----------------------------->
+    <main class="mx-8 sm:mx-0">
+      <!-- hero container -->
+      <div class="sm:max-w-[1440px] sm:mx-auto relative">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div
+              class="w-full bg-[url('assets/img/banner1.png')] h-[240px] sm:h-[600px] rounded-2xl bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-2xl before:bg-[linear-gradient(180deg,_#121212_0%,_rgba(18,_18,_18,_0.00)_100%)]"
+            >
+              <div class="z-30 space-y-3 sm:space-y-7">
+                <h1 class="text-2xl sm:text-7xl font-bold">
+                  Exotic tastes at your<br />
+                  doorstep
+                </h1>
+                <p class="sm:text-xl">
+                  We supply high quality organic products
+                </p>
+                <button
+                  class="bg-[#f85559] hover:bg-[#fc3437] text-white px-6 py-3 rounded-md text-xl"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2 sm:left-10 sm:right-10"
+            >
+              <a
+                href="#slide4"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❮</a
+              >
+              <a
+                href="#slide2"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❯</a
+              >
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <div
+              class="w-full bg-[url('assets/img/banner2.png')] h-[240px] sm:h-[600px] rounded-2xl bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-2xl before:bg-[linear-gradient(180deg,_#121212_0%,_rgba(18,_18,_18,_0.00)_100%)]"
+            >
+              <div class="z-30 space-y-3 sm:space-y-7">
+                <h1 class="text-2xl sm:text-7xl font-bold">
+                  Exotic tastes at your<br />
+                  doorstep
+                </h1>
+                <p class="sm:text-xl">
+                  We supply high quality organic products
+                </p>
+                <button
+                  class="bg-[#f85559] hover:bg-[#fc3437] text-white px-6 py-3 rounded-md text-xl"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2 sm:left-10 sm:right-10"
+            >
+              <a
+                href="#slide1"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❮</a
+              >
+              <a
+                href="#slide3"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❯</a
+              >
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div
+              class="w-full bg-[url('assets/img/banner3.png')] h-[240px] sm:h-[600px] rounded-2xl bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-2xl before:bg-[linear-gradient(180deg,_#121212_0%,_rgba(18,_18,_18,_0.00)_100%)]"
+            >
+              <div class="z-30 space-y-3 sm:space-y-7">
+                <h1 class="text-2xl sm:text-7xl font-bold">
+                  Exotic tastes at your<br />
+                  doorstep
+                </h1>
+                <p class="sm:text-xl">
+                  We supply high quality organic products
+                </p>
+                <button
+                  class="bg-[#f85559] hover:bg-[#fc3437] text-white px-6 py-3 rounded-md text-xl"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2 sm:left-10 sm:right-10"
+            >
+              <a
+                href="#slide2"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❮</a
+              >
+              <a
+                href="#slide4"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❯</a
+              >
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <div
+              class="w-full bg-[url('assets/img/banner4.png')] h-[240px] sm:h-[600px] rounded-2xl bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-2xl before:bg-[linear-gradient(180deg,_#121212_0%,_rgba(18,_18,_18,_0.00)_100%)]"
+            >
+              <div class="z-30 space-y-3 sm:space-y-7">
+                <h1 class="text-2xl sm:text-7xl font-bold">
+                  Exotic tastes at your<br />
+                  doorstep
+                </h1>
+                <p class="sm:text-xl">
+                  We supply high quality organic products
+                </p>
+                <button
+                  class="bg-[#f85559] hover:bg-[#fc3437] text-white px-6 py-3 rounded-md text-xl"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2 sm:left-10 sm:right-10"
+            >
+              <a
+                href="#slide3"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❮</a
+              >
+              <a
+                href="#slide1"
+                class="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] bg-black text-white grid place-items-center rounded-full"
+                >❯</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- floting food card -->
+        <div class="hidden sm:block">
+          <!-- card container -->
+          <div
+            class="max-w-[1196px] mx-auto bg-white shadow-lg flex items-center gap-20 px-[70px] py-10 rounded-lg absolute top-[85%] left-[10%]"
+          >
+            <div class="grid place-items-center gap-2">
+              <img src="assets/img/fruit1.png" alt="" />
+              <p>Strawberry</p>
+            </div>
+            <div class="grid place-items-center gap-2">
+              <img src="assets/img/fruit2.png" alt="" />
+              <p>Orange</p>
+            </div>
+            <div class="grid place-items-center gap-2">
+              <img src="assets/img/fruit3.png" alt="" />
+              <p>Mango</p>
+            </div>
+            <div class="grid place-items-center gap-2">
+              <img src="assets/img/fruit4.png" alt="" />
+              <p>Strawberry</p>
+            </div>
+            <div class="grid place-items-center gap-2">
+              <img src="assets/img/fruit5.png" alt="" />
+              <p>Pomegranate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!----------------------------
+          Deal section
+    ----------------------------->
+    <section class="mx-8 sm:mx-0 sm:mt-72 my-12">
+      <!-- dead container -->
+      <div class="sm:max-w-[1440px] sm:mx-auto">
+        <!-- deal content -->
+        <div
+          class="flex flex-col sm:flex-row sm:text-left items-center justify-between text-center"
+        >
+          <!-- deal content text -->
+          <div class="space-y-3 sm:w-[600px]">
+            <h2 class="text-2xl sm:text-5xl font-extrabold text-[#121212]">
+              Deal Of the day
+            </h2>
+            <p class="text-lg sm:text-base text-[#5e5e5e]">
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <!-- deal content countdown (timer) -->
+          <div class="mt-8 flex items-center gap-6">
+            <!-- countdowns -->
+            <div class="grid place-items-center">
+              <h2 class="font-semibold text-5xl">29</h2>
+              <p class="text-sm">Days</p>
+            </div>
+            <p class="font-semibold">:</p>
+            <div class="grid place-items-center">
+              <h2 class="font-semibold text-5xl">15</h2>
+              <p class="text-sm">Hours</p>
+            </div>
+            <p class="font-semibold">:</p>
+            <div class="grid place-items-center">
+              <h2 class="font-semibold text-5xl">25</h2>
+              <p class="text-sm">Minutes</p>
+            </div>
+            <p class="font-semibold">:</p>
+            <div class="grid place-items-center">
+              <h2 class="font-semibold text-5xl">08</h2>
+              <p class="text-sm">Seconds</p>
+            </div>
+          </div>
+        </div>
+        <!-- deal cards (container) -->
+        <div class="sm:flex sm:items-center gap-6">
+          <!-- card 1 -->
+          <div
+            class="mt-10 w-full sm:w-[340px] border px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+          >
+            <img src="assets/img/fruit6.png" alt="" />
+            <h2 class="text-2xl font-extrabold text-[#121212]">
+              12.80$ - 18.85$
+            </h2>
+            <hr class="border border-gray-100 w-[80%]" />
+            <p class="text-lg text-[#5e5e5e]">Apples</p>
+            <img src="assets/img/rating.svg" alt="" />
+            <!-- Modal Button {copied from "Daisy UI"} -->
+            <button class="text-[#F85559]" onclick="my_modal_1.showModal()">
+              Details
+            </button>
+            <dialog id="my_modal_1" class="modal">
+              <form method="dialog" class="modal-box">
+                <div
+                  class="mt-8 w-full px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+                >
+                  <img src="assets/img/fruit6.png" alt="" />
+                  <h2 class="text-2xl font-extrabold text-[#121212]">Apples</h2>
+                  <p class="text-[#5e5e5e]">
+                    Professional employees are there for you to pick the most
+                    amazing and fresh fruits.
+                  </p>
+                  <img src="assets/img/rating.svg" alt="" />
+                  <div class="modal-action flex items-center gap-2">
+                    <button
+                      class="px-5 py-3 border border-[#F85559] rounded-lg text-[#F85559] hover:border-transparent hover:bg-[#F85559] hover:text-white transition"
+                    >
+                      Close
+                    </button>
+                    <!-- extra btn -->
+                    <a
+                      class="cursor-pointer px-5 py-3 rounded-lg text-white bg-[#F85559] hover:border-transparent hover:bg-[#f71e22] hover:text-white transition"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="mt-10 w-full sm:w-[340px] border px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+          >
+            <img src="assets/img/orange.png" alt="" />
+            <h2 class="text-2xl font-extrabold text-[#121212]">
+              12.90$ - 18.85$
+            </h2>
+            <hr class="border border-gray-100 w-[80%]" />
+            <p class="text-lg text-[#5e5e5e]">Orange</p>
+            <img src="assets/img/rating.svg" alt="" />
+            <!-- Modal Button {copied from "Daisy UI"} -->
+            <button class="text-[#F85559]" onclick="my_modal_2.showModal()">
+              Details
+            </button>
+            <dialog id="my_modal_2" class="modal">
+              <form method="dialog" class="modal-box">
+                <div
+                  class="mt-8 w-full px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+                >
+                  <img src="assets/img/orange.png" alt="" />
+                  <h2 class="text-2xl font-extrabold text-[#121212]">Orange</h2>
+                  <p class="text-[#5e5e5e]">
+                    Professional employees are there for you to pick the most
+                    amazing and fresh fruits.
+                  </p>
+                  <img src="assets/img/rating.svg" alt="" />
+                  <div class="modal-action flex items-center gap-2">
+                    <button
+                      class="px-5 py-3 border border-[#F85559] rounded-lg text-[#F85559] hover:border-transparent hover:bg-[#F85559] hover:text-white transition"
+                    >
+                      Close
+                    </button>
+                    <!-- extra btn -->
+                    <a
+                      class="cursor-pointer px-5 py-3 rounded-lg text-white bg-[#F85559] hover:border-transparent hover:bg-[#f71e22] hover:text-white transition"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="mt-10 w-full sm:w-[340px] border px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+          >
+            <img src="assets/img/fruit8.png" alt="" />
+            <h2 class="text-2xl font-extrabold text-[#121212]">
+              12.90$ - 18.85$
+            </h2>
+            <hr class="border border-gray-100 w-[80%]" />
+            <p class="text-lg text-[#5e5e5e]">Red Dragon</p>
+            <img src="assets/img/rating.svg" alt="" />
+            <!-- Modal Button {copied from "Daisy UI"} -->
+            <button class="text-[#F85559]" onclick="my_modal_3.showModal()">
+              Details
+            </button>
+            <dialog id="my_modal_3" class="modal">
+              <form method="dialog" class="modal-box">
+                <div
+                  class="mt-8 w-full px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+                >
+                  <img src="assets/img/fruit8.png" alt="" />
+                  <h2 class="text-2xl font-extrabold text-[#121212]">
+                    Red Dragon
+                  </h2>
+                  <p class="text-[#5e5e5e]">
+                    Professional employees are there for you to pick the most
+                    amazing and fresh fruits.
+                  </p>
+                  <img src="assets/img/rating.svg" alt="" />
+                  <div class="modal-action flex items-center gap-2">
+                    <button
+                      class="px-5 py-3 border border-[#F85559] rounded-lg text-[#F85559] hover:border-transparent hover:bg-[#F85559] hover:text-white transition"
+                    >
+                      Close
+                    </button>
+                    <!-- extra btn -->
+                    <a
+                      class="cursor-pointer px-5 py-3 rounded-lg text-white bg-[#F85559] hover:border-transparent hover:bg-[#f71e22] hover:text-white transition"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+          <!-- card 4 -->
+          <div
+            class="mt-10 w-full sm:w-[340px] border px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+          >
+            <img src="assets/img/fruit9.png" alt="" />
+            <h2 class="text-2xl font-extrabold text-[#121212]">
+              12.90$ - 18.85$
+            </h2>
+            <hr class="border border-gray-100 w-[80%]" />
+            <p class="text-lg text-[#5e5e5e]">Banana</p>
+            <img src="assets/img/rating.svg" alt="" />
+            <!-- Modal Button {copied from "Daisy UI"} -->
+            <button class="text-[#F85559]" onclick="my_modal_4.showModal()">
+              Details
+            </button>
+            <dialog id="my_modal_4" class="modal">
+              <form method="dialog" class="modal-box">
+                <div
+                  class="mt-8 w-full px-6 py-12 rounded-xl flex flex-col items-center justify-center gap-7 text-center"
+                >
+                  <img src="assets/img/fruit9.png" alt="" />
+                  <h2 class="text-2xl font-extrabold text-[#121212]">Banana</h2>
+                  <p class="text-[#5e5e5e]">
+                    Professional employees are there for you to pick the most
+                    amazing and fresh fruits.
+                  </p>
+                  <img src="assets/img/rating.svg" alt="" />
+                  <div class="modal-action flex items-center gap-2">
+                    <button
+                      class="px-5 py-3 border border-[#F85559] rounded-lg text-[#F85559] hover:border-transparent hover:bg-[#F85559] hover:text-white transition"
+                    >
+                      Close
+                    </button>
+                    <!-- extra btn -->
+                    <a
+                      class="cursor-pointer px-5 py-3 rounded-lg text-white bg-[#F85559] hover:border-transparent hover:bg-[#f71e22] hover:text-white transition"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+        </div>
+        <!-- deal button (shop all) -->
+        <div class="w-full grid place-items-center mt-16">
+          <button
+            class="cursor-pointer px-8 py-4 rounded-lg text-white bg-[#F85559] text-xl hover:border-transparent hover:bg-[#f71e22] active:scale-90 hover:text-white transition"
+          >
+            Shop All
+          </button>
+        </div>
+      </div>
+    </section>
+    <!----------------------------
+        Team section
+    ----------------------------->
+    <section class="mx-8 sm:my-32 sm:mx-0">
+      <!-- team container -->
+      <div
+        class="sm:max-w-[1440px] sm:mx-auto flex flex-col items-center justify-center gap-6 sm:gap-12 text-center w-full bg-[url('assets/img/team.png')] bg-center bg-cover bg-no-repeat relative before:absolute before:left-0 before:top-0 before:bg-black/60 before:w-full before:rounded-xl before:h-full before:z-[-1] z-30 px-8 py-12 sm:py-24 rounded-xl text-white"
+      >
+        <!-- team content -->
+        <div class="space-y-3 sm:space-y-5 sm:w-[750px]">
+          <h2 class="text-2xl sm:text-5xl font-bold">Meet the team section</h2>
+          <p class="text-[#dadada] sm:text-xl">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <!-- team image (container) -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-32"
+        >
+          <!-- image 1 -->
+          <div class="space-y-3">
+            <img src="assets/img/member1.png" alt="" />
+            <h3 class="text-xl font-semibold">Awlad Hossain</h3>
+            <p class="text-lg">Fruits Export</p>
+            <!-- social icons -->
+            <div class="flex items-center justify-center gap-3">
+              <!-- facebook icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <!-- twitter icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <!-- linkedin icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <!-- image 2 -->
+          <div class="space-y-3">
+            <img src="assets/img/member3.png" alt="" />
+            <h3 class="text-xl font-semibold">Rakib Hossain</h3>
+            <p class="text-lg">Fruits Export</p>
+            <!-- social icons -->
+            <div class="flex items-center justify-center gap-3">
+              <!-- facebook icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <!-- twitter icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <!-- linkedin icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <!-- image 3 -->
+          <div class="space-y-3">
+            <img src="assets/img/member2.png" alt="" />
+            <h3 class="text-xl font-semibold">Awlad Hossain</h3>
+            <p class="text-lg">Fruits Export</p>
+            <!-- social icons -->
+            <div class="flex items-center justify-center gap-3">
+              <!-- facebook icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <!-- twitter icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <!-- linkedin icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <!-- image 4 -->
+          <div class="space-y-3">
+            <img src="assets/img/member4.png" alt="" />
+            <h3 class="text-xl font-semibold">Awlad Hossain</h3>
+            <p class="text-lg">Fruits Export</p>
+            <!-- social icons -->
+            <div class="flex items-center justify-center gap-3">
+              <!-- facebook icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <!-- twitter icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <!-- linkedin icon -->
+              <div
+                class="w-7 h-7 bg-[#f85559] rounded-full grid place-items-center cursor-pointer"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------
+        Why us section (I'll do it later) 🔴
+    ----------------------------->
+    <section class="mt-12 mx-8">
+      <!-- why us container -->
+      <div class="grid place-items-center sm:max-w-[1440px] sm:mx-auto">
+        <!-- why us heading -->
+        <div class="space-y-3 text-center">
+          <h2 class="text-2xl sm:text-5xl font-extrabold text-[#121212]">
+            Why Choose Us
+          </h2>
+          <p class="sm:text-base text-[#5e5e5e]">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <!-- why us content -->
+        <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-8 sm:gap-8 mt-8">
+          <!-- content 1 -->
+          <div class="grid place-items-center gap-8">
+            <!-- info 1 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/dedicated.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">Dedicated Team</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <!-- info 2 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/fresh.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">Fresh is Best</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <!-- info 3 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/gift.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">Gift Certificates</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- content 2 (image) -->
+          <div class="-order-1 sm:order-none grid place-items-center w-full">
+            <img src="assets/img/whychoose1.png" alt="" />
+          </div>
+          <!-- content 3 -->
+          <div class="grid place-items-center gap-8">
+            <!-- info 1 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/supplier.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">Integrated Supplier</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <!-- info 2 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/sustainable.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">Sustainable Practice</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <!-- info 3 -->
+            <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-start items-center justify-center gap-4">
+              <!-- info rounded icon -->
+              <div
+                class="bg-[#e7e7e7] w-12 h-12 sm:w-20 sm:h-auto sm:p-3 rounded-full grid place-items-center"
+              >
+                <img src="assets/img/benefits.svg" alt="" />
+              </div>
+              <!-- info text -->
+              <div class="space-y-3 grid place-items-center sm:place-items-start">
+                <h3 class="text-xl font-bold">The Benefits Only</h3>
+                <hr class="w-[25%] border-black/60" />
+                <p class="w-[65%] sm:w-auto">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------
+        footer section
+    ----------------------------->
+    <footer class="bg-[#121212] mt-12">
+      <!-- footer container -->
+      <div
+        class="px-8 py-20 flex flex-col items-center justify-center gap-12 sm:gap-10 text-white"
+      >
+        <!-- footer logo -->
+        <div class="flex items-center gap-3 cursor-pointer">
+          <img src="assets/img/logo.png" alt="Nav_logo" />
+          <p class="text-2xl font-medium sm:text-white">Fruit Burst</p>
+        </div>
+        <!-- footer menu -->
+        <div>
+          <ul
+            class="flex items-center gap-x-12 gap-y-6 flex-wrap justify-center text-lg text-[#d8d8d8]"
+          >
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >All Fruits</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >Support</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-white transition hover:underline"
+                >My Account</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- footer social icons -->
+        <div class="flex items-center justify-center gap-6">
+          <a href=""><img src="assets/img/twitter 1.svg" alt="" /></a>
+          <a href=""><img src="assets/img/linkedin 1.svg" alt="" /></a>
+          <a href=""><img src="assets/img/apple 1.svg" alt="" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
